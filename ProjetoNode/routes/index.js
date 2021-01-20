@@ -1,25 +1,12 @@
 const express = require('express');
 
 const router = express.Router();
-
 router.get('/', (req, res) => {
+    let obj = {
+        pageTitle: "Teste 123"
+    }
 
-    // res.json(req.query);
-    res.send('testando...');
-
-    // GET req.query
-    // POST req.body
-    // Parametros da url: req.paramns
+    res.render('home', obj);
 });
-
-/* router.get('/posts/:slug', (req, res) => {
-    let slug = req.params.slug;
-
-    res.send('slug do post: ' + slug);
-});
-
-router.get('/sobre', (req, res) => {
-    res.send('Página Sobre!');
-}); */
 
 module.exports = router;

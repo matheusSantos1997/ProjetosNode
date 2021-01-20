@@ -9,7 +9,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopolo
 mongoose.Promise = global.Promise; // permite o mongoose usar ecms6
 mongoose.connection.on('error', (error) => {
     console.error('ERRO: ' + error.message);
-})
+});
 
 app.set('port', process.env.PORT || 3000);
 
