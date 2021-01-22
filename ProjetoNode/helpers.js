@@ -5,5 +5,6 @@ exports.menu = [
     { name: 'Sobre', slug: '/sobre' },
     { name: 'Contato', slug: '/contato' },
     { name: 'Teste', slug: '/teste' },
-    // { name: 'Login', slug: '/users/login' }
+    { name: 'Login', slug: '/views/login' },
+    { name: 'Register', slug: '/views/register' }
 ];
