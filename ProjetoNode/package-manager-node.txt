@@ -9,3 +9,5 @@ npm install nodemon --save-dev - instala na dependencia de desenvolvedor
 npm install dotenv
 
 npm install mongoose --save
+
+npm install ejs -save

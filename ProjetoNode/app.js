@@ -28,8 +28,8 @@ app.use('/', router); // permiti o uso de rotas
 
 app.use(errorHandler.notFound);
 
-app.engine('mst', mustache(__dirname + '/views/partials', '.mst')); // extensao do arquivo mustache
-app.set('view engine', 'mst');
+app.engine('ejs', mustache(__dirname + '/views/partials', '.ejs')); // extensao do arquivo mustache
+app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 module.exports = app;
