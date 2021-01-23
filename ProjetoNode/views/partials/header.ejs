@@ -1,22 +1,24 @@
 <html>
+
 <head>
-     {{#pageTitle}}
-     <title>{{pageTitle}}</title>
-     {{/pageTitle}}
-     
-     <!-- caso nao exista o page title -->
-     {{^pageTitle}}
-     <title>{{h.defaultPageTitle}}</title>
-     {{/pageTitle}}
+    <title>{{pageTitle}} {{h.defaultPageTitle}}</title>
 </head>
+
 <body>
     <h1>Cabeçalho</h1>
-    <hr/>
-<ul>
-    {{#h.menu}}
-    <li><a href="{{slug}}">{{name}}</a></li>
-    {{/h.menu}}
-</ul>
-<hr/>
+    <hr>
+    <ul>
+        {{#h.menu}}
+        <li><a href="{{slug}}">{{name}}</a></li>
+        {{/h.menu}}
+    </ul>
+    <hr/> {{#flashes}} {{#success}}
+    <div>{{.}}</div>
+    {{/success}} {{#error}}
+    <div>{{.}}</div>
+    {{/error}} {{#info}}
+    <div>{{.}}</div>
+    {{/info}} {{/flashes}}
 </body>
+
 </html>

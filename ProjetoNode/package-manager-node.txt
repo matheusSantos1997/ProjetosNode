@@ -11,3 +11,5 @@ npm install dotenv
 npm install mongoose --save
 
 npm install ejs -save
+
+npm install cookie-parser express-session express-flash --save

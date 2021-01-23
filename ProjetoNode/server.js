@@ -1,4 +1,3 @@
-const app = require('./app'); // importando a aplicaçao
 const mongoose = require('mongoose'); // usando a dependencia mongoose
 
 // usando a dependencia dotenv
@@ -11,6 +10,10 @@ mongoose.connection.on('error', (error) => {
     console.error('ERRO: ' + error.message);
 });
 
+// Crregando todos os models
+require('./models/Post');
+
+const app = require('./app'); // importando a aplicaçao
 app.set('port', process.env.PORT || 3000);
 
 // vai ouvir a porta

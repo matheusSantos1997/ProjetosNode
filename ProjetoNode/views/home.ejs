@@ -1,6 +1,7 @@
 {{> header }}
 
 <h1>Página Home</h1>
-
-<p>USUARIO LOGADO: {{userInfo.name}}</p>
-<p>SEU ID É: {{userInfo.id}}</p>
+<hr> {{#posts}}
+<h3>{{title}}</h3>
+<h3>{{body}}</h3>
+<hr> {{/posts}}

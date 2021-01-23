@@ -1,10 +1,7 @@
-exports.defaultPageTitle = "Site ABC";
+exports.defaultPageTitle = "Site";
 
 exports.menu = [
     { name: 'Home', slug: '/' },
-    { name: 'Sobre', slug: '/sobre' },
-    { name: 'Contato', slug: '/contato' },
-    { name: 'Teste', slug: '/teste' },
-    { name: 'Login', slug: '/views/login' },
-    { name: 'Register', slug: '/views/register' }
+    { name: 'Login', slug: '/users/login' },
+    { name: 'Adicionar Post', slug: '/posts/add' }
 ];
