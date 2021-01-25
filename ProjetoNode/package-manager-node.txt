@@ -13,3 +13,7 @@ npm install mongoose --save
 npm install ejs -save
 
 npm install cookie-parser express-session express-flash --save
+
+npm install slug --save
+
+npm install multer jimp uuid --save - bibliotecas de uploads de imagens

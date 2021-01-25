@@ -8,6 +8,10 @@ exports.index = async(req, res) => {
         posts: []
     }
 
+    const tags = await Post.getTagsList();
+    responseJson.tags = tags;
+
+    // pega a lista de posts cadrastrados
     const posts = await Post.find();
     responseJson.posts = posts;
 

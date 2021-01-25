@@ -4,7 +4,7 @@ const mongoose = require('mongoose'); // usando a dependencia mongoose
 require('dotenv').config({ path: 'variables.env' });
 
 // criando string de conexao com o mongoDB
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 mongoose.Promise = global.Promise; // permite o mongoose usar ecms6
 mongoose.connection.on('error', (error) => {
     console.error('ERRO: ' + error.message);

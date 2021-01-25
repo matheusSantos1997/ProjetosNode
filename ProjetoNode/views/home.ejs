@@ -1,7 +1,12 @@
 {{> header }}
 
 <h1>Página Home</h1>
-<hr> {{#posts}}
-<h3>{{title}}</h3>
-<h3>{{body}}</h3>
-<hr> {{/posts}}
+{{#posts}}
+<div class="post">
+    {{#photo}}
+    <img src="/upload/{{photo}}" /> {{/photo}}
+    <h3><a href="/post/{{slug}}">{{title}}</a></h3>
+    <p>{{body}}</p>
+    <a href="/post/{{slug}}/edit">[ editar ]</a>
+</div>
+{{/posts}}

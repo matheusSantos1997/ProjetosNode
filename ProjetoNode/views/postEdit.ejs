@@ -1,0 +1,23 @@
+{{ > header }}
+<h1>Adicionar posts</h1>
+<form method="post" enctype="multipart/form-data">
+    <label>
+        Imagem:
+        <input type="file" name="photo" />
+        {{#post.photo}}
+          <img class="img-mini" src="/upload/{{post.photo}}" />
+        {{/post.photo}}
+    </label>
+    <label>Título:
+        <input type="text" name="title" value="{{post.title}}" />
+    </label><br>
+    <label>Corpo: 
+        <textarea name="body">{{post.body}}</textarea>
+    </label><br>
+    <label>
+         Tags:<small>(Separar as tags por vírgula)</small>
+         <input type="text" name="tags" value="{{post.tags}}" />
+    </label><br><br>
+
+    <button type="submit">Salvar</button>
+</form>
