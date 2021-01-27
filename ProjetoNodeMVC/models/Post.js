@@ -38,11 +38,13 @@ postSchema.pre('save', async function(next) {
     next();
 });
 
-// tratando a performance do mongoDB
-postSchema.statics.getTagsList = () => {
+postSchema.statics.getTagsList = function() {
     return this.aggregate([
-        { $unwind: '$tags' }
-    ])
+        { $unwind: '$tags' },
+        { $group: { _id: '$tags', count: { $sum: 1 } } }, // agrupando as tags
+        { $sort: { count: -1 } }
+
+    ]);
 }
 
 module.exports = mongoose.model('Post', postSchema);

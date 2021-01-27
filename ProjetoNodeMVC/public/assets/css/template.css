@@ -102,3 +102,18 @@ img {
 .img-mini {
     max-width: 300px;
 }
+
+.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tags .tag {
+    padding: 10px;
+}
+
+.tag.selected a {
+    color: #FF0000;
+}
