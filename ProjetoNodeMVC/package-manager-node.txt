@@ -17,3 +17,7 @@ npm install cookie-parser express-session express-flash --save
 npm install slug --save
 
 npm install multer jimp uuid --save - bibliotecas de uploads de imagens
+
+---------node package manager autenticaçao login-------
+
+npm install passport passport-local passport-local-mongoose --save
