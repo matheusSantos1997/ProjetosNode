@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6057e5514d9cec29d8d1deec"
+  },
+  "tags": [
+    "nodejs",
+    "nodets"
+  ],
+  "title": "node",
+  "body": "node é bom",
+  "photo": "2e2460ff-bfd8-4d3f-bf94-6bf37d1471b4.png",
+  "slug": "node",
+  "__v": 0
+}]
