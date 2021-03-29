@@ -1,0 +1,50 @@
+iniciando um projeto node:
+
+npm init
+
+npm install express --save
+
+npm install body-parser --save
+
+npm install cors --save
+
+npm install mysql2 --save
+
+npm install nodemon --save-dev - instala na dependencia de desenvolvedor
+
+npm install dotenv
+
+npm install mongoose --save
+
+npm install cookie-parser express-session express-flash --save
+
+npm install slug --save
+
+npm install multer jimp uuid --save - bibliotecas de uploads de imagens
+
+//----------------------------
+
+const express = require('express');
+const path = require('path');
+const http = require('http');
+const socketIO = require('socket.io'); // importa o socket io
+const { connected } = require('process');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server); // associa o socketIO com o servidor
+
+app.set('port', 3000);
+
+server.listen(app.get('port'), () => {
+    console.log(`Servidor rodando na porta: ${server.address().port}`);
+});
+
+// lendo a pasta public
+app.use(express.static(path.join(__dirname, 'public')));
+
+---------node package manager autenticaçao login com mongoDB-------
+
+npm install passport passport-local passport-local-mongoose --save
+
+__________________________________________________________________________
