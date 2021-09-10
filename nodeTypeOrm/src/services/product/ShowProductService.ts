@@ -1,25 +1,25 @@
 import { getCustomRepository } from "typeorm";
-import AppError from "../errors/AppError";
-import { ProductRepository } from "../repositories/ProductRepository";
+import AppError from "../../errors/AppError";
+import Product from "../../models/Product";
+import { ProductRepository } from "../../repositories/ProductRepository";
 
 interface IRequest {
     Id: string;
 }
 
-class DeleteProductServices {
-    public async execute({ Id } : IRequest): Promise<void> {
+class ShowProductService {
+    public async execute({Id} : IRequest): Promise<Product> {
         // chamando o product repository
         const productsRepository = getCustomRepository(ProductRepository);
         
-        // verifica se existe um produto
+        // vai listar todos os repositorios
         const product = await productsRepository.findOne(Id);
         
         if(!product) {
             throw new AppError('Product Not Found.');
         }
-
-        await productsRepository.remove(product);
+        return product;
     }
 }
 
-export default DeleteProductServices;
+export default ShowProductService;

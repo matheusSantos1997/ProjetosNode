@@ -3,7 +3,9 @@ import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 import { errors } from 'celebrate';
-import routes from './routes/routes';
+import routesProducts from './routes/products.routes';
+import routesUsers from './routes/users.routes';
+import routesSessions from './routes/sessions.routes';
 import AppError from './errors/AppError';
 import './typeorm/index';
 
@@ -12,7 +14,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
+app.use(routesProducts);
+app.use(routesUsers);
+app.use(routesSessions);
 app.use(errors());
 
 // middlewares

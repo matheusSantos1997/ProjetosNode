@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import CreateProductService from "../services/CreateProductService";
-import DeleteProductServices from "../services/DeleteProductService";
-import ListProductService from "../services/ListProductService";
-import ShowProductService from "../services/ShowProductService";
-import UpdateProductService from "../services/UpdateProductService";
+import CreateProductService from "../services/product/CreateProductService";
+import DeleteProductServices from "../services/product/DeleteProductService";
+import ListProductService from "../services/product/ListProductService";
+import ShowProductService from "../services/product/ShowProductService";
+import UpdateProductService from "../services/product/UpdateProductService";
 
 export default class ProductsController {
     // listagem de produtos 
